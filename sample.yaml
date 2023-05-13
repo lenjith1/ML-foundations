@@ -1,12 +1,15 @@
  # Play1 - WebServer related tasks
   - name: Play Web - Create apache directories and username in web servers
     hosts: all
-    
+    tasks:
+     - name: create group
+       group:
+         name: users
     tasks:
       - name: create username apacheadm
         user:
           name: apacheadm
-          group: users,admin
+          group: users
           shell: /bin/bash
           home: /home/weblogic
 
