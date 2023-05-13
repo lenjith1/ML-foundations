@@ -36,5 +36,5 @@
           path: /opt/oracle
           owner: tomcatadm
           group: users
-          state: present
+          state: directory
           mode: 0755
